@@ -1,0 +1,58 @@
+<style type="text/css">
+	.active {
+		background-color: #307FB5;
+	}
+</style>
+<form class="move" style="position: fixed;">
+	<fieldset>
+		<a href="#sec1"><p id="high1">2016</p></a>
+		<a href="#sec2"><p id="high2">2017</p></a>
+		<a href="#sec3"><p id="high3">2018</p></a>
+	</fieldset>
+</form>
+<div style="height: 100%"></div>
+<div class="spacer s1" id="sec1">
+	<div class="box2" style="background-color: #8DBBE0; height: 100%;">
+		<p>One</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s1" id="sec2">
+	<div class="box2" style="background-color: #6AA6D8; height: 100%;">
+		<p>Two</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s1" id="sec3">
+	<div class="box2" style="background-color: #4E96D1; height: 100%;">
+		<p>Three</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s1" id="sec4">
+	<div class="box2" style="background-color: #307FB5; height: 100%;">
+		<p>Four</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</div>
+<div class="spacer s2"></div>
+<script src="./ScrollMagic.min.js"></script>
+<script src="./debug.addIndicators.min.js"></script>
+<script>
+	// init controller
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: "100%"}});
+
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#sec1"})
+					.setClassToggle("#high1", "active") // add class toggle
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#sec2"})
+					.setClassToggle("#high2", "active") // add class toggle
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#sec3"})
+					.setClassToggle("#high3", "active") // add class toggle
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+</script>
